@@ -1,16 +1,20 @@
 import './App.css'
 
 import { Tasks } from './components/Tasks'
+import { useSEO } from './hooks/useSEO'
 import { useTaskList } from './hooks/useTaskList'
 
 const link = ''
 
 const App = () => {
-  const {taskList, handleAddItem, removeTask, checkboxChange} = useTaskList()
-  
+  const { taskList, handleAddItem, removeTask, checkboxChange } = useTaskList()
+  useSEO({
+    title: `[${taskList.length} Tareas pendientes]`,
+    description: 'Añadir y eliminar elementos de una lista',
+  })
 
   const handleSubmit = event => {
-    event.preventDefault()  
+    event.preventDefault()
 
     const { elements } = event.currentTarget
     const input = elements.namedItem('item')
