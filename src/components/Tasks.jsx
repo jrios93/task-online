@@ -27,7 +27,7 @@ export function Tasks({
         </span>
         {link.length != link ? (
           <a href={link} target="_blank" rel="noreferrer">
-            <span className=" text-blue-600">Link</span>
+            <span className=" text-blue-400 text-lg">Link</span>
           </a>
         ) : (
           ''
