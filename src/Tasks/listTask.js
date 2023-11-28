@@ -50,7 +50,7 @@ export const listWork = [
   },
   {
     id: crypto.randomUUID(),
-    text: 'Realizar 10 publicaciones en Market Place de Facebook',
+    text: 'Realizar publicaciones en Market Place de Facebook',
     done: false,
     link,
   },
