@@ -58,15 +58,15 @@ const App = () => {
 
   const completedTasks = taskList.filter(item => item.done).length
   return (
-    <div className=" h-auto w-screen p-16 bg-slate-950 text-slate-50 font-roboto">
-      <div className="flex justify-between">
-        <div className=" p-6 flex flex-col gap-20">
+    <div className=" h-auto w-full md:p-10 p-2 lg:p-16 bg-slate-950 text-slate-50 font-roboto">
+      <div className="flex flex-col gap-10 lg:flex-row lg:justify-between">
+        <div className=" p-6 flex flex-col gap-20 border rounded-lg lg:border-0">
           <p className="text-3xl flex gap-2 items-center">
             <FaRegCircleCheck /> TodoApp
           </p>
-          <p className="text-8xl font-orbitron">{hourtimeReal}</p>
+          <p className="text-6xl md:text-8xl lg:text-9xl font-orbitron lg:text-left text-center">{hourtimeReal}</p>
         </div>
-        <div className="p-6 flex flex-col gap-2 border-slate-500 border-2 rounded-lg h-full">
+        <div className="p-6 flex flex-col gap-2 border-slate-500 border-2 rounded-lg h-full ">
           <div className="flex justify-between mb-6 ">
             <p className="text-xl">Todo List</p>
             <p className="border rounded-lg px-2 ">{`${completedTasks}/${taskList.length}`}</p>

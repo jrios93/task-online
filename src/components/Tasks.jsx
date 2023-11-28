@@ -11,12 +11,12 @@ export function Tasks({
 }) {
   return (
     <div className="flex justify-between items-center gap-12">
-      <li className="border px-4 py-2 border-gray-700 rounded-lg w-full flex gap-2">
+      <li className="border px-4 py-2 border-gray-700 rounded-lg w-full flex gap-6 lg:gap-4 items-center">
         <input
           type="checkbox"
           checked={done}
           onChange={() => handleCheckboxChange(id)}
-          className="border rounded-sm"
+          className="border rounded-sm  scale-150"
         />
         <span
           style={
@@ -24,13 +24,13 @@ export function Tasks({
               ? { textDecoration: 'line-through' }
               : { textDecoration: 'none' }
           }
-          className="text-lg"
+          className="lg:text-lg text-xl"
         >
           {text}
         </span>
         {link.length != link ? (
           <a href={link} target="_blank" rel="noreferrer">
-            Link
+            <span className=" text-fuchsia-600">Link</span>
           </a>
         ) : (
           ''
